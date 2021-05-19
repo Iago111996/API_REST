@@ -1,5 +1,7 @@
-const teste = 2;
-console.log(teste);
-import Fala from './app';
+import app from './app';
 
-Fala();
+const port = process.env.PORT || 3001;
+
+app.listen(port, () => {
+  console.log(`Server runing on port ${port}`);
+});
